@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Calorie Calculator</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        
+        <!-- Template Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+		
+		<style type = "text/css">
+		 label    { font-family: SimSun, monospace, arial, sans-serif; }
+		</style>
+		
+		<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>	
+		<script>
+		
+		function output(){
+		var sum;
+		var bean = document.getElementById('bean').value;
+		var beanNum = document.getElementById('beanNum').value;
+		var meat = document.getElementById( 'meat' ).value;
+		var meatNum = document.getElementById( 'meatNum' ).value;
+		var drink = document.getElementById( 'drink' ).value;
+		var drinkNum = document.getElementById( 'drinkNum' ).value;
+		var veg = document.getElementById( 'veg' ).value;
+		var vegNum = document.getElementById( 'vegNum' ).value;
+		var china = document.getElementById( 'china' ).value;
+		var chinaNum = document.getElementById( 'chinaNum' ).value;
+		var oil = document.getElementById( 'oil' ).value;
+		var oilNum = document.getElementById( 'oilNum' ).value;
+		var west = document.getElementById( 'west' ).value;
+		var westNum = document.getElementById( 'westNum' ).value;
+		var fruit = document.getElementById( 'fruit' ).value;
+		var fruitNum = document.getElementById( 'fruitNum' ).value;
+		var milk = document.getElementById( 'milk' ).value;
+		var milkNum = document.getElementById( 'milkNum' ).value;
+		console.log("bean",bean);
+		
+		sum = 0;
+		sum += bean*beanNum + meat*meatNum + drink*drinkNum + veg*vegNum + china*chinaNum + oil*oilNum + west*westNum + fruit*fruitNum + milk*milkNum;
+		
+
+		window.alert( "您總共攝取" + sum + "大卡" );
+
+		}
+		
+		
+
+		</script>
+		
+    </head>
+
+    <body>
+	   
+        <!-- Food Start action="calculate.php" -->
+		<form  name="form_caculate" method="post" action="javascript:output()">
+		
+        <div class="food mt-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>五穀根莖類
+							<select name="bean" id="bean" >
+								<option value="0">請選擇</option>
+								<option value="280">白飯1碗</option> 
+								<option value="80">稀飯1碗</option>
+								<option value="80">麵1碗</option>
+								<option value="70">吐司1片</option>
+								<option value="70">餐包1個</option>
+								<option value="70">小籠包1個</option>
+								<option value="70">蘿蔔糕1塊</option>
+								<option value="280">饅頭1個</option>
+								<option value="140">冬粉1碗</option>
+								<option value="140">米粉1碗</option>
+								<option value="210">玉米1根</option>
+								<option value="140">馬鈴薯1個</option>
+								<option value="140">地瓜1個</option>
+								<option value="140">燒餅1個</option>
+								<option value="140">油條1根</option>
+							</select>
+							</label>
+							
+							<label>五穀根莖類份量
+							<select name="beanNum" id="beanNum">
+								<option value="0">請選擇</option>
+							    <option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							</label>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>蛋豆魚肉
+							<select name="meat" id="meat">
+								<option value="0">請選擇</option>
+								<option value="55">瘦肉1個拳頭大小</option>
+								<option value="120">魚肉1個拳頭大小</option>
+								<option value="165">雞腿1隻</option>
+								<option value="55">雞胸肉1個拳頭大小</option>
+								<option value="55">火腿1片</option>
+								<option value="55">蝦10隻</option>
+								<option value="55">豆漿240cc</option>
+								<option value="55">牛肉1個拳頭大小</option>
+								<option value="15">排骨1塊</option>
+								<option value="75">雞蛋1個</option>
+								<option value="75">豆腐1塊</option>
+								<option value="75">雞翅1隻</option>
+								<option value="120">乳酪1片</option>
+        				    </select>
+        					</label>
+							
+							<label>魚肉蛋豆份量
+							<select name="meatNum" id="meatNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+        					</select>
+        					</label>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>飲料
+							<select name="drink" id="drink">	
+								<option value="0">請選擇</option>
+								<option value="60">紅茶1杯</option>
+								<option value="160">珍珠奶茶1杯</option>
+								<option value="80">仙草蜜1瓶300cc</option>
+	       						<option value="110">運動飲料1瓶355cc</option>
+	       						<option value="330">八寶粥1罐380cc</option>
+	       						<option value="50">三合一咖啡1包</option>
+	       						<option value="80">奶昔1杯</option>
+	       						<option value="150">燒仙草1杯</option>
+	       						<option value="100">養樂多1瓶100cc</option>
+	       						<option value="180">原味優酪乳1瓶230cc</option>
+	       						<option value="510">柳橙汁1瓶900cc</option>
+	       						<option value="155">可樂1瓶355cc</option>
+	       						<option value="100">罐裝咖啡1瓶250cc</option>
+	       						<option value="160">鮮奶1盒</option>
+	       						<option value="180">調味奶1盒</option>
+							</select>
+        					</label>
+                            
+							<label>飲料份量
+							<select name="drinkNum" id="drinkNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+        					</select>
+        					</label>
+							
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>蔬菜類
+							<select name="veg" id="veg">
+								<option value="0">請選擇</option>
+			 					<option value="25">芹菜100g</option>
+		     					<option value="25">青椒100g</option>
+		     					<option value="25">苦瓜100g</option>
+		     					<option value="25">冬瓜100g</option>
+		     					<option value="25">大白菜100g</option>
+		     					<option value="25">萵苣100g</option>
+		     					<option value="25">絲瓜100g</option>
+		     					<option value="25">大頭菜100g</option>
+		     					<option value="25">小白菜100g</option>
+		     					<option value="25">蕃茄100g</option>
+		     					<option value="25">豆芽100g</option>
+		     					<option value="25">青江菜100g</option>
+		     					<option value="25">韭菜100g</option>
+		     					<option value="25">竹筍100g</option>
+		     					<option value="25">花菜100g</option>
+		     					<option value="25">高麗菜100g</option>
+		     					<option value="25">空心菜100g</option>
+		     					<option value="25">金針菇100g</option>
+		     					<option value="25">四季豆100g</option>
+		     					<option value="25">菠菜100g</option>
+		     					<option value="25">香菇100g</option>
+		     					<option value="25">地瓜葉100g</option>          			 				 				 				 				 				 				 
+        					</select>
+        					</label>
+							
+							<label>蔬菜類份量
+							<select name="vegNum" id="vegNum">
+								<option value="0">請選擇</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							</label>
+                            
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>小吃
+							<select name="china" id="china">
+								<option value="0">請選擇</option>
+		  						<option value="380">蚵仔煎1份</option>
+          						<option value="255">水煎包2個</option>
+	      						<option value="40">豬肉水餃1個</option>
+	      						<option value="225">鮮肉包1個</option>
+	      						<option value="255">蛋餅1份</option>
+	      						<option value="275">炒米粉1碗</option>
+	      						<option value="385">炸醬麵1碗</option>
+	      						<option value="400">榨菜肉絲麵1碗</option>
+	      						<option value="540">牛肉麵1碗</option>
+	      						<option value="345">泡麵1碗</option>
+	      						<option value="220">蚵仔麵線1碗</option>
+	      						<option value="700">雞腿飯1碗</option>
+	      						<option value="510">排骨麵1碗</option>
+	      						<option value="370">臭豆腐1份</option>
+	      						<option value="120">荷包蛋1個</option>
+	      						<option value="185">米粉湯1碗</option>
+        					</select>
+        					</label>
+                            
+							<label>小吃份量
+							<select name="chinaNum" id="chinaNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+        					</select>
+        					</label>
+							
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>油脂類
+							<select name="oil" id="oil">
+								<option value="0">請選擇</option>
+		   						<option value="45">植物油1茶匙</option>
+           						<option value="45">動物油1茶匙</option>
+	       						<option value="45">沙拉醬2茶匙</option>
+	       						<option value="45">瑪琪琳1茶匙</option>
+	       						<option value="45">鮮奶油1湯匙</option>
+	       						<option value="45">培根1片</option>
+	       						<option value="45">瓜子50粒</option>
+	       						<option value="45">花生10粒</option>
+	       						<option value="45">芝麻2湯匙</option>
+	       						<option value="45">開心果10粒</option>
+							</select>
+							</label>
+							
+							<label>油脂類份量
+							<select name="oilNum" id="oilNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+   						    </select>
+     					    </label>
+                            
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>西式餐點
+							<select name="west" id="west">
+								<option value="0">請選擇</option>
+		  						<option value="131">肉醬義大利麵1份</option>
+          						<option value="850">焗烤奶油義大利麵1份</option>
+	      						<option value="710">燉飯1份</option>
+	      						<option value="410">豬排漢堡1份</option>
+	      						<option value="443">魚排漢堡1份</option>
+	      						<option value="503">雞排漢堡1份\</option>
+	      						<option value="340">薯條1份</option>
+	      						<option value="243">蘑菇湯1碗</option>
+	      						<option value="285">雞塊1份</option>
+	      						<option value="765">焗烤龍蝦1隻</option>
+	      						<option value="203">玉米濃湯1碗</option>
+	      						<option value="450">酥皮濃湯1碗</option>
+	      						<option value="545">烤鴨胸1份</option>
+	      						<option value="151">烤羊小排1塊</option>
+	      						<option value="980">A5和牛1份</option>
+	      						<option value="560">麥香雞1個</option>
+	      						<option value="232">沙朗牛排1塊</option>
+	      						<option value="450">大亨堡1個</option>
+    					    </select>
+							</label>
+							
+							<label>西式餐點份量
+							<select name="westNum" id="westNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+        					</select>
+        					</label>
+                            
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>水果類
+							<select name="fruit" id="fruit">
+								<option value="0">請選擇</option>
+	    						<option value="120">柿子1個</option>
+	       						<option value="60">葡萄8個</option>
+	       						<option value="60">梨子1個</option>
+	       						<option value="60">蘋果1個</option>
+	       						<option value="60">櫻桃9個</option>
+	       						<option value="60">龍眼12個</option>
+	        					<option value="600">鳳梨1個</option>
+	        					<option value="240">哈密瓜1個</option>
+	        					<option value="60">西瓜1片</option>
+	        					<option value="120">芭樂1個</option>
+	        					<option value="60">草莓9個</option>
+        						<option value="20">蓮霧1個</option>
+	       						<option value="240">芒果1個</option>
+	       						<option value="60">柳丁1個</option>
+	       						<option value="60">椪柑1個</option>
+	       						<option value="20">柚子1片</option>
+	       						<option value="120">香蕉1根</option>
+	       						<option value="60">水蜜桃1個</option>
+	       						<option value="12">荔枝1個</option>
+	       						<option value="240">木瓜1個</option>
+	        					<option value="60">奇異果1個)</option>
+	        					<option value="60">棗子3個</option>
+	        					<option value="60">小番茄15個</option>
+							</select>
+        					</label>
+							
+							<label>水果類份量
+							<select name="fruitNum" id="fruitNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+        					</select>
+        					</label>
+                            
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="food-item">
+                            
+                            <label>奶製品
+							<select name="milk" id="milk">
+								<option value="0">請選擇</option>
+		   						<option value="150">全脂奶粉4湯匙</option>
+           						<option value="120">低脂奶粉3湯匙</option>
+		   						<option value="80">脫脂奶粉3湯匙</option>
+		   						<option value="113">奶酪1份</option>
+		   						<option value="52">奶油1湯匙</option>
+					    	</select>
+        				    </label>
+							
+							<label>奶製品份量
+							<select name="milkNum" id="milkNum">
+								<option value="0">請選擇</option>
+		  						<option value="1">1</option>
+		  						<option value="2">2</option>
+		  						<option value="3">3</option>
+		  						<option value="4">4</option>
+      						</select>
+    						</label>
+                            
+                        </div>
+                    </div>
+					
+					<button style="margin-left: 45%;" class="btn custom-btn" type="submit" id="sendMessageButton">送出</button>
+					</form>
+					
+                </div>
+            </div>
+        </div>
+
+        
+		<!-- Food End -->
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
+

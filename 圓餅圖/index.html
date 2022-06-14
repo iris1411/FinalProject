@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+		['縣市', '累積確診數'],
+		['台北市',	324942],
+		['新北市',	746656],
+		['基隆市',	70932],
+		['宜蘭縣',	60608],
+		['桃園市',	368359],
+		['新竹市',	55152],
+		['新竹縣',	77482],
+		['苗栗縣',	54293],
+		['台中市',	310184],
+		['彰化縣',	121246],
+		['南投縣',	39050],
+		['雲林縣',	45070],
+		['嘉義市',	20796],
+		['嘉義縣',	32674],
+		['台南市',	182893],
+		['高雄市',	315893],
+		['屏東縣',	81712],
+		['花蓮縣',	47253],
+		['台東縣',	23867],
+		['澎湖縣',	5456],
+		['連江縣',	945],
+		['金門縣',	3718],
+		]);
+
+        var options1 = {
+          title: '各縣市COVIV-19累積確診數(20220614)',
+          is3D: true,
+        };
+		
+        var chart1 = new google.visualization.PieChart(document.getElementById('piechart_3d1'));
+        chart1.draw(data1, options1);
+
+      }
+    </script>
+	<style type = "text/css">
+         div     { float: right;}
+    </style>
+
+  </head>
+  <body>
+	
+	<div id="piechart_3d1" style="width: 1000px; height: 500px;"></div>
+	
+  </body>
+</html>
